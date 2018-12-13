@@ -1,7 +1,20 @@
 {
     "name": "tag-name-parser",
+    "description": "A tag name parser that does not support attributes. Lightweight and fast when only need tag names.",
     "version": "0.0.0",
+    "author": "skt-t1-byungi <tiniwz@gmail.com>",
+    "repository": "git@github.com:skt-t1-byungi/tag-name-parser.git",
+    "keywords": [
+        "tag",
+        "html",
+        "dom",
+        "xml",
+        "tag name",
+        "parser",
+        "parse"
+    ],
     "main": "index.js",
+    "files": ["index.js"],
     "license": "MIT",
     "scripts": {
         "test": "ava"

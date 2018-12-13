@@ -1,7 +1,7 @@
 module.exports = function parse (str, opts) {
     opts = opts || { strict: true }
 
-    var re = /<(\/)?([^<>\s/]*)\s?(\/)?>/g
+    var re = /<(\/)?(\w+)\s?(\/)?>/g
     var pos = 0
     var root = { children: [] }
     var current = root
@@ -22,7 +22,7 @@ module.exports = function parse (str, opts) {
             if (current.name === tagName) {
                 current = stacks.pop()
             } else if (opts.strict) {
-                throw new TypeError('[tag-name-parser] Invalid close tag. (' + tagName + ':' + idx + ')')
+                throw new TypeError('[tag-name-parser] Invalid close tag. ("</' + tagName + '>":' + idx + ')')
             }
         } else {
             if (isSingle) {
@@ -36,7 +36,7 @@ module.exports = function parse (str, opts) {
 
     if (pos < str.length) current.children.push(str.slice(pos))
     if (stacks.length > 1 && opts.strict) {
-        throw new TypeError('[tag-name-parser] Close tag is missing. (' + stacks[stacks.length - 1].name + ')')
+        throw new TypeError('[tag-name-parser] Close tag ("<' + current.name + '>") is missing.')
     }
 
     return root.children
