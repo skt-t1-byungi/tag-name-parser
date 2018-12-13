@@ -3,7 +3,7 @@
     "description": "A tag name parser that does not support attributes. Lightweight and fast when only need tag names.",
     "version": "0.0.1",
     "author": "skt-t1-byungi <tiniwz@gmail.com>",
-    "repository": "git@github.com:skt-t1-byungi/tag-name-parser.git",
+    "repository": "https://github.com/skt-t1-byungi/tag-name-parser.git",
     "keywords": [
         "tag",
         "html",

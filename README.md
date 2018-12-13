@@ -1,4 +1,7 @@
 # tag-name-parser
+
+[![npm](https://img.shields.io/npm/v/tag-name-parser.svg?style=flat-square)](https://www.npmjs.com/package/tag-name-parser)
+
 A tag name parser that does not support attributes. Lightweight and fast when only need tag names.
 
 ## Install
