@@ -89,7 +89,8 @@ tag-name-parser|htmlparser2|parse5|sax|html-parse-stringify2
 ---|---|---|---|---
 ~85 ms|~243 ms|~1.34 s|~458 ms|~333 ms
 
-The tag-name-parser has different purposes than other libraries. It does not claim to be more useful than other libraries through this benchmark.
+The tag-name-parser has different purposes than other libraries.
+It does not claim to be better than other libraries through this benchmark.
 
 ## License
 MIT
