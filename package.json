@@ -24,7 +24,12 @@
     "devDependencies": {
         "ava": "^0.25.0",
         "eslint": "^5.10.0",
-        "eslint-config-byungi": "^0.2.3"
+        "eslint-config-byungi": "^0.2.3",
+        "html-parse-stringify2": "^2.0.1",
+        "htmlparser2": "^3.10.0",
+        "nanobench": "^2.1.1",
+        "parse5": "^5.1.0",
+        "sax": "^1.2.4"
     },
     "eslintConfig": {
         "extends": "byungi"
