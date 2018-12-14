@@ -64,5 +64,23 @@ output:
 ]
 ```
 
+## Change tag bracket
+```js
+parse('hello[a]world[/a]', {tag: ['[', ']']})
+```
+output:
+```js
+{
+    'hello',
+    {
+        name: 'a',
+        single: false,
+        children: [
+            'world'
+        ]
+    }
+}
+```
+
 ## License
 MIT

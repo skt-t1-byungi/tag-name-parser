@@ -114,6 +114,24 @@ mn('non-strict #1',
     ]
 )
 
+test('change tag bracket', t => {
+    t.deepEqual(parse('hello[a]world[b/][/a]~!', { tag: ['[', ']'] }), [
+        'hello',
+        {
+            name: 'a',
+            single: false,
+            children: [
+                'world',
+                {
+                    name: 'b',
+                    single: true
+                }
+            ]
+        },
+        '~!'
+    ])
+})
+
 test('close tag err', t => {
     t.throws(() => parse('test<d></t>test'), '[tag-name-parser] Invalid close tag. ("</t>":7)')
     t.throws(() => parse('test<d><t>test'), '[tag-name-parser] Close tag ("<t>") is missing.')
