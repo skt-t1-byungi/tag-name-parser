@@ -19,7 +19,8 @@
     ],
     "license": "MIT",
     "scripts": {
-        "test": "ava"
+        "test": "ava",
+        "bench": "node bench.js"
     },
     "devDependencies": {
         "ava": "^0.25.0",

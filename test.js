@@ -6,6 +6,7 @@ const mn = (desc, input, expect) => test(desc, t => t.deepEqual(parse(input, { s
 
 m('text only', 'hello', ['hello'])
 m('tag only', '<a>hello</a>', [{ name: 'a', single: false, children: ['hello'] }])
+m('with attrs', '<a href="#" alt="link" style="display:block;">hello</a>', [{ name: 'a', single: false, children: ['hello'] }])
 m('text,tag',
     'hello<t>world</t>',
     ['hello', { name: 't', single: false, children: ['world'] }]

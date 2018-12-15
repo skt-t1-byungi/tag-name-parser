@@ -6,7 +6,7 @@ const parse5 = require('parse5')
 const sax = require('sax')
 const stringify2 = require('html-parse-stringify2')
 
-const str = fs.readFileSync('./bench_suit.txt', 'utf-8').trim()
+const str = fs.readFileSync('./bench-example.txt', 'utf-8').trim()
 
 bench('tag-name-parser', b => {
     b.start()

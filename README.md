@@ -83,14 +83,14 @@ output:
 ```
 
 ## Benchmark
-Each test 10,000 times.
+Each test 10,000 times. (bench-example.txt)
 
 tag-name-parser|htmlparser2|parse5|sax|html-parse-stringify2
 ---|---|---|---|---
-~85 ms|~243 ms|~1.34 s|~458 ms|~333 ms
+~175 ms|~592 ms|~2.67 s|~1.27 s|~887 ms
 
-The tag-name-parser has different purposes than other libraries.
 It does not claim to be better than other libraries through this benchmark.
+The tag-name-parser has different purposes than other libraries.
 
 ## License
 MIT
