@@ -4,10 +4,10 @@ module.exports = function parse (str, opts) {
     // normalize
     var strict = 'strict' in opts ? opts.strict : true
     var tag = 'tag' in opts ? opts.tag : ['<', '>']
-    var opeTag = e(tag[0])
+    var openTag = e(tag[0])
     var closeTag = e(tag[1])
 
-    var re = new RegExp(opeTag + '(\\/)?(\\w+)\\s?[^' + closeTag + '/]*(\\/)?' + closeTag, 'g')
+    var re = new RegExp(openTag + '(\\/)?(\\w+)\\s?[^' + closeTag + '/]*(\\/)?' + closeTag, 'g')
     var pos = 0
     var root = { children: [] }
     var current = root
