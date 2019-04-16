@@ -1,6 +1,5 @@
+export type Node = string | {name: string, single: true} | {name: string, single: false, children: Node[]}
+
+declare function parse(str:string, opts?: {strict?: boolean, tag?: [string, string]}): Node[]
+
 export = parse
-
-declare function parse(str:string, opts?: Options): Node[]
-
-type Options = Partial<{strict: boolean, tag: [string, string]}>
-type Node = string | {name: string, single: true} | {name: string, single: false, children: Node[]}
