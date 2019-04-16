@@ -98,13 +98,13 @@ m('nested #2',
     ])
 
 mn('non-strict #1',
-    '<a>invalid string<b>',
+    '<a>Invalid<b>',
     [
         {
             name: 'a',
             single: false,
             children: [
-                'invalid string',
+                'Invalid',
                 {
                     name: 'b',
                     single: false,

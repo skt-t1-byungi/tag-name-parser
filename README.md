@@ -1,8 +1,7 @@
 # tag-name-parser
+A tag parser that does not support attributes. Lightweight and fast.
 
-[![npm](https://img.shields.io/npm/v/tag-name-parser.svg?style=flat-square)](https://www.npmjs.com/package/tag-name-parser)
-
-A tag name parser that does not support attributes. Lightweight and fast when only need tag names.
+[![npm](https://flat.badgen.net/npm/v/tag-name-parser)](https://www.npmjs.com/package/tag-name-parser)
 
 ## Install
 ```sh
@@ -41,10 +40,11 @@ output:
 ]
 ```
 
-## Non-strict
-If do not use strict option, it returns result without exception.
+## Non-strict mode
+If strict is false, the result is returned without error.
+
 ```js
-parse('<a>invalid string<b>', {strict: false})
+parse('<a>invalid<b>', {strict: false})
 ```
 output:
 ```js
@@ -53,7 +53,7 @@ output:
         name: 'a',
         single: false,
         children: [
-            'invalid string',
+            'invalid',
             {
                 name: 'b',
                 single: false,
@@ -64,14 +64,14 @@ output:
 ]
 ```
 
-## Change tag bracket
+## Change tag brackets.
 ```js
-parse('hello[a]world[/a]', {tag: ['[', ']']})
+parse('hello [a]world[/a]', {tag: ['[', ']']})
 ```
 output:
 ```js
 {
-    'hello',
+    'hello ',
     {
         name: 'a',
         single: false,
@@ -85,12 +85,11 @@ output:
 ## Benchmark
 Each test 10,000 times. (bench-example.txt)
 
-tag-name-parser|htmlparser2|parse5|sax|html-parse-stringify2
----|---|---|---|---
-~175 ms|~592 ms|~2.67 s|~1.27 s|~887 ms
+tag-name-parser|htmlparser2|parse5|sax|html-parse-stringify2|fast-xml-parser
+---|---|---|---|---|---
+**~184 ms**|~609 ms|~2.67 s|~1.41 s|~910 ms|~529 ms
 
-It does not claim to be better than other libraries through this benchmark.
-The tag-name-parser has different purposes than other libraries.
+> It is fast because it does not provide much. 😜
 
 ## License
 MIT
