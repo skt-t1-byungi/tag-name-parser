@@ -5,6 +5,7 @@ const htmlparser2 = require('htmlparser2')
 const parse5 = require('parse5')
 const sax = require('sax')
 const stringify2 = require('html-parse-stringify2')
+const fastXmlParser = require('fast-xml-parser')
 
 const str = fs.readFileSync('./bench-example.txt', 'utf-8').trim()
 
@@ -42,5 +43,18 @@ bench('sax', b => {
 bench('html-parse-stringify2', b => {
     b.start()
     for (let i = 0; i < 10000; i++) stringify2.parse(str)
+    b.end()
+})
+
+bench('fast-xml-parser', b => {
+    b.start()
+    for (let i = 0; i < 10000; i++) {
+        fastXmlParser.parse(str, {
+            ignoreAttributes: true,
+            ignoreNameSpace: true,
+            parseNodeValue: false,
+            trimValues: false
+        })
+    }
     b.end()
 })
