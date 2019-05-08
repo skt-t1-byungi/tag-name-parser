@@ -25,15 +25,15 @@
         "bench": "node bench.js"
     },
     "devDependencies": {
-        "ava": "^1.4.1",
-        "eslint": "^5.16.0",
-        "eslint-config-byungi": "^0.2.9",
-        "fast-xml-parser": "^3.12.16",
-        "html-parse-stringify2": "^2.0.1",
-        "htmlparser2": "^3.10.1",
-        "nanobench": "^2.1.1",
-        "parse5": "^5.1.0",
-        "sax": "^1.2.4"
+        "ava": "1.4.1",
+        "eslint": "5.16.0",
+        "eslint-config-byungi": "0.2.9",
+        "fast-xml-parser": "3.12.16",
+        "html-parse-stringify2": "2.0.1",
+        "htmlparser2": "3.10.1",
+        "nanobench": "2.1.1",
+        "parse5": "5.1.0",
+        "sax": "1.2.4"
     },
     "eslintConfig": {
         "extends": "byungi"
